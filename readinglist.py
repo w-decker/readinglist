@@ -34,7 +34,7 @@ def get_year(items:dict) -> list:
         year = items[i]['data']['date']
 
         # append 
-        years.append([year])
+        years.append(year)
 
     return years
 
@@ -56,7 +56,7 @@ def get_author(items:dict) -> list:
         for j, _ in enumerate(range(n_auth)):
             first = point[j]['firstName']
             last = point[j]['lastName']
-            _authors.append([f'{first} {last}'])
+            _authors.append(f'{first} {last}')
 
         # add to global
         authors.append(_authors)
@@ -76,7 +76,7 @@ def get_title(items:dict) -> list:
         title = items[i]['data']['title']
 
         # append 
-        titles.append([title])
+        titles.append(title)
 
     return titles
 
@@ -97,7 +97,7 @@ def get_doi(items:dict) -> list:
             doi = ''
 
         # append 
-        dois.append([doi])
+        dois.append(doi)
 
     return dois
 
@@ -118,7 +118,7 @@ def get_journal(items:dict) -> list:
             journal = ''
 
         # append 
-        journals.append([journal])
+        journals.append(journal)
 
     return journals
 
@@ -130,7 +130,4 @@ def make_readinglist(items:dict):
                    "Authors":get_author(items), "DOI":get_doi(items)}
     
     return READINGLIST
-
-def write_readinglist():
-    pass
     
